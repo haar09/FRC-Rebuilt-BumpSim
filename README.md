@@ -101,11 +101,8 @@ Call after MapleSim updates:
 ```java
 Pose2d simPose = mapleSimDrive.getSimulatedDriveTrainPose();
 
-ChassisSpeeds robotRelSpeeds =
-    mapleSimDrive.getDriveTrainSimulatedChassisSpeedsRobotRelative();
-
-ChassisSpeeds fieldSpeeds =
-    ChassisSpeeds.fromRobotRelativeSpeeds(robotRelSpeeds, simPose.getRotation());
+ChassisSpeeds fieldRelativeSpeeds =
+    mapleSimSwerveDrivetrain.mapleSimDrive.getDriveTrainSimulatedChassisSpeedsFieldRelative();
 
 Pose3d simPose3d = robotBumpSim.update(simPose, fieldSpeeds, subticks);
 ```
