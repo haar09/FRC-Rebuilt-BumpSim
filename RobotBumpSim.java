@@ -46,8 +46,7 @@ import edu.wpi.first.math.kinematics.ChassisSpeeds;
  *
  * // 2. Call every simulationPeriodic() AFTER MapleSim has stepped.
  * Pose2d simPose = mapleSimDrive.getSimulatedDriveTrainPose();
- * ChassisSpeeds robotRelSpeeds = mapleSimDrive.getDriveTrainSimulatedChassisSpeedsRobotRelative();
- * ChassisSpeeds fieldSpeeds = ChassisSpeeds.fromRobotRelativeSpeeds(robotRelSpeeds, simPose.getRotation());
+ * ChassisSpeeds fieldRelativeSpeeds = mapleSimSwerveDrivetrain.mapleSimDrive.getDriveTrainSimulatedChassisSpeedsFieldRelative();
  *
  * // subticks should match the number of physics sub-steps you pass to your ball/object sim.
  * // A value of 5 works well for a 20 ms loop (4 ms sub-steps).
